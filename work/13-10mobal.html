@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal-wreapper {
+            position: fixed;
+            top:0px;
+
+        }
+        .wrapper {
+            position: fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            background : rgba(0, 0, 0, 0.5);
+        }
+
+        .md {
+            position:absolute;
+            top:200px;
+            left:500px;
+            width:400px;
+            height:200px;
+            background:pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>모달창 실습</h1>
+    <button onclick="modalDiv.style.display = 'block';">모달창 열기</button>
+    <!--모달창부분-->
+    <div class="wrapper" style="display: none; ">
+        <div class="md">
+            <h1>안녕</h1>
+            <button onclick="modalDiv.style.display = 'none';">닫기</button>
+        </div>
+    </div>
+    <script>
+        const modalDiv = document.querySelector(".wrapper"); // 모달창부분 div 지정
+    </script>
+</body>
+</html>

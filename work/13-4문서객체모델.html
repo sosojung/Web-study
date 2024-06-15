@@ -1,0 +1,23 @@
+<head>
+	<meta charset="UTF-8">
+	<style>h3{color:red;}</style>
+</head>
+<body>
+    <button onclick="tt()">textContent로 표시</button>
+    <button onclick="innhtml()">innerHTML로 표시</button>
+    <h1>현재 시각:</h1>
+	<div id="current"></div>  <!-- current: 현재 진행 중. 계속 진행 중임을 나타내는 코딩 용어-->
+	
+	<script>
+        function tt() {
+			let now = new Date();
+			let curDiv = document.getElementById("current");
+			curDiv.textContent = now;
+		}
+		function innhtml() {
+			let now = new Date();
+			let curDiv = document.getElementById("current");
+			curDiv.innerHTML = "<h3>" + now + "</h3>";
+		}
+	</script>
+</body>

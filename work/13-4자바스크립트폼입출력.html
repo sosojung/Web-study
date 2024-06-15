@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 연습</title>
+  <style>
+    #msg{
+	border : 2px solid royalblue;
+	margin-top : 20px;
+	padding : 20px;
+	width : 300px;
+	height : 100px;
+	box-sizing : border-box;
+	background-color : antiquewhite;
+    }
+  </style>
+	<script>
+    function show() {
+      var inputValue = document.getElementById('form1').elements['txt'].value;
+      var msgDiv = document.getElementById('msg');
+      msgDiv.innerHTML = `${inputValue}님 안녕하세요! 반갑습니다!`;
+    }
+  </script>
+</head>
+<body>
+  <h2>JavaScript 연습</h2>
+  
+  <form id="form1">
+    <input type="text" name="txt">
+    <button type="button" onclick="show()">확인</button>
+    <button type="reset">초기화</button>
+  </form>
+  <div id="msg"></div>
+  
+  
+</body>
+</html>

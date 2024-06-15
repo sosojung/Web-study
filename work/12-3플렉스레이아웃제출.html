@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            box-sizing: border-box;
+        }
+                     
+        #content {
+            display:flex;
+            height:100vh;
+            background: url('./images/bg0.jpg');
+            background-size: cover;
+            justify-content:center;
+            align-items:center;
+        }        
+        button {
+            margin-right:20px;
+        }         
+    </style>
+</head>
+<body id="content">
+    <button onclick ="body1.style.justifyContent = 'center'">주축 가운데 정렬!</button>
+    <button onclick ="alignItems()">교차축 가운데 정렬!</button>
+   
+   <script>
+        let body1 = document.getElementById("content");
+
+        function justifyContent(){
+            body1.style.justifyContent = "center";
+        }
+        function alignItems(){
+            body1.style.alignItems = "center";
+        }
+    </script>
+         
+</body>
+</html>

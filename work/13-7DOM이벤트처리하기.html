@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+	<h2>counter 구현하기</h2>
+  <h4 id="counter">0</h2>
+  <div>
+    <button id="plus">+1</button> 
+    <button id="minus">-1</button>
+  </div>
+  <script>
+    var counterElement = document.getElementById('counter');
+    var counter = 0;
+
+    var plusButton = document.getElementById('plus');
+    var minusButton = document.getElementById('minus');
+
+    plusButton.onclick = function() {
+      counter++;
+      counterElement.textContent = counter;
+    }
+
+    minusButton.onclick = function() {
+      counter--;
+      counterElement.textContent = counter;
+    }
+  </script>
+</body>
+</html>

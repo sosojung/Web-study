@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modal Example</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .modal-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center; /* 중앙 정렬 */
+        justify-content: center; /* 중앙 정렬 */
+      }
+
+      .modal {
+        background: white;
+        padding: 24px 16px;
+        border-radius: 4px;
+        width: 320px;
+      }
+
+      .modal-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .modal p {
+        font-size: 16px;
+      }
+
+      .close-wrapper {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요!</h1>
+    <p>모달창 실습입니다.</p>
+    <button id="openModal">모달창 열기</button>
+
+    <div class="modal-wrapper" id="modalWrapper">
+      <div class="modal">
+        <h2>안녕하세요</h2>
+        <p>모달 내용을 보여줍니다.</p>
+        <div class="close-wrapper">
+          <button id="closeModal">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const openModalBtn = document.getElementById('openModal');
+      const closeModalBtn = document.getElementById('closeModal');
+      const modalWrapper = document.getElementById('modalWrapper');
+
+      // 모달창 열기
+      openModalBtn.addEventListener('click', () => {
+        modalWrapper.style.display = 'flex';
+      });
+
+      // 모달창 닫기
+      closeModalBtn.addEventListener('click', () => {
+        modalWrapper.style.display = 'none';
+      });
+
+      // 모달 외부 클릭 시 닫기
+      window.addEventListener('click', (event) => {
+        if (event.target === modelWrapper) 
+          modalWrapper.style.display = 'none';
+        });
+    </script>
+  </body>
+</html>

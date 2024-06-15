@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id = "h2">My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<button onClick="firstFunction()">클릭하세요</button>
+<button onClick="글자색변경()">글자색 변경</button>
+<script>
+    const h2Element = document.getElementById("h2");
+    function firstFunction(){
+        console.log("console을 사용해서 출력");
+        alert("알림을 실행합니다");
+    }
+    function 글자색변경(){
+        h2Element.style.color = 'red';
+    }
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
