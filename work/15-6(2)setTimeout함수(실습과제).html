@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Window 객체</h1>
+<h2>The setTimeout()함수</h2>
+<p>[클릭] 버튼을 누르면 3초 후 "안녕하세요"를 출력합니다.</p>
+<p>[중지]버튼을 누르면 메시지를 출력하지 않습니다.</p>
+
+<button onclick = "clickFunction ()">클릭</button>
+<button onclick = "stopFunction ()">중지</button>
+ 
+<script>
+const myTimeout = setTimeout(myGreeting, 3000);
+function myGreeting() {
+    alert("안녕하세요");
+}
+function myStopFunction () {
+    cleatTimeout(myTimeout);
+}
+</script>
+</body>
+</html>
